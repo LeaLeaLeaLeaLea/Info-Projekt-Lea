@@ -8,6 +8,8 @@ import java.awt.*;
 class MainPlayer extends Actor implements GGKeyListener
 {
   public static int goldAmount = 0;
+  private TextActor text = new TextActor("Anzahl Gold: "+goldAmount,Color.white,new Color(255,255,255,0),new Font("Arial",0,22));
+  
   public MainPlayer()
   {
       super(false, "wizard2.png");
@@ -47,16 +49,20 @@ class MainPlayer extends Actor implements GGKeyListener
     if (actor != null)
     {
         goldAmount++;
-        gameGrid.setTitle("Gold: " + goldAmount);
         actor.removeSelf();
         for (int n = 0; n < 1; n++)
-              gameGrid.addActor(new Gold(), gameGrid.getRandomEmptyLocation());
+              gameGrid.addActor(new Gold(), gameGrid.getRandomEmptyLocation());    
     }
   }
   public void showScore()
   {
-      TextActor text = new TextActor("Anzahl Gold: "+goldAmount,Color.white,new Color(255,255,255,0),new Font("Arial",0,22));
+      text.removeSelf();
+      text = new TextActor("Anzahl Gold: "+goldAmount,Color.white,new Color(255,255,255,0),new Font("Arial",0,22));
       gameGrid.addActor(text, new Location(0,9));
-      
+
+      {
+          text.removeSelf();
+          gameGrid.addActor(text, new Location(0,9));
+      }    
   }
 }
