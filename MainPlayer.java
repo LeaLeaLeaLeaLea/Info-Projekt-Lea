@@ -46,7 +46,7 @@ class MainPlayer extends Actor implements GGKeyListener
     Actor actor = gameGrid.getOneActorAt(getLocation(), Gold.class);
     if (actor != null)
     {
-       actor.hide();
+       actor.removeSelf();
     }
   }
   public void countScore()

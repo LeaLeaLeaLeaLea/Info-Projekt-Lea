@@ -12,6 +12,7 @@ public class MainActivity extends GameGrid
 {
   public int goldAmount = 0;  
   MainPlayer mainPlayer;
+  Gold gold;
   
   public MainActivity()
   {
@@ -24,7 +25,15 @@ public class MainActivity extends GameGrid
     addActor(villain, new Location(10,10));
     
     for (int i = 0; i < 10; i++)
-      addActor(new Gold(), getRandomEmptyLocation());
+    {
+        gold = new Gold();
+        addActor(gold, getRandomEmptyLocation());
+    }
+    if (gold.isRemoved())
+    {
+        addActor(gold, getRandomEmptyLocation());
+    }
+   
     
     /*Actor actor = getOneActorAt(mainPlayer.getLocation(), Gold.class);  
     if(actor != null)
