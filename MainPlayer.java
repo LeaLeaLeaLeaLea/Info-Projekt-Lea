@@ -31,7 +31,6 @@ class MainPlayer extends Actor implements GGKeyListener
         break;
     }
      move();
-     countScore();
      tryToTake();
     
     return true;
@@ -46,17 +45,11 @@ class MainPlayer extends Actor implements GGKeyListener
     Actor actor = gameGrid.getOneActorAt(getLocation(), Gold.class);
     if (actor != null)
     {
-       actor.removeSelf();
-    }
-  }
-  public void countScore()
-  {
-      Actor actor1 = gameGrid.getOneActorAt(getLocation(), Gold.class);
-      if (actor1 != null)
-      {
         goldAmount++;
         gameGrid.setTitle("Gold: " + goldAmount);
-        //gameGrid.setStatusText("Gold: " + goldAmount);
-      }
+        actor.removeSelf();
+        for (int n = 0; n < 1; n++)
+              gameGrid.addActor(new Gold(), gameGrid.getRandomEmptyLocation());
+    }
   }
 }

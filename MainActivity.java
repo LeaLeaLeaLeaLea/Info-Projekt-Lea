@@ -1,6 +1,3 @@
-
-// MyGameGrid.java
-
 import ch.aplu.jgamegrid.*;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
@@ -24,17 +21,12 @@ public class MainActivity extends GameGrid
     Villain villain = new Villain(mainPlayer);
     addActor(villain, new Location(10,10));
     
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 6; i++)
     {
         gold = new Gold();
         addActor(gold, getRandomEmptyLocation());
     }
-    if (gold.isRemoved())
-    {
-        addActor(gold, getRandomEmptyLocation());
-    }
    
-    
     /*Actor actor = getOneActorAt(mainPlayer.getLocation(), Gold.class);  
     if(actor != null)
         goldAmount++;*/
@@ -44,6 +36,7 @@ public class MainActivity extends GameGrid
     setTitle("Sammle alles Gold & Lass dich nicht erwischen!");
     
     countScore();
+    addGold();
     show();
     doRun();
   }
@@ -58,5 +51,14 @@ public class MainActivity extends GameGrid
       {
         goldAmount++;
       }
+  }
+  public void addGold()
+  {
+      Actor gold = getOneActorAt(mainPlayer.getLocation(), Gold.class); 
+      if (gold != null)
+       {
+          for (int n = 0; n < 1; n++)
+              addActor(new Gold(), getRandomEmptyLocation());
+       }
   }
 }
