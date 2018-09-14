@@ -32,6 +32,7 @@ class MainPlayer extends Actor implements GGKeyListener
     }
      move();
      tryToTake();
+     showScore();
     
     return true;
   }
@@ -51,5 +52,11 @@ class MainPlayer extends Actor implements GGKeyListener
         for (int n = 0; n < 1; n++)
               gameGrid.addActor(new Gold(), gameGrid.getRandomEmptyLocation());
     }
+  }
+  public void showScore()
+  {
+      TextActor text = new TextActor("Anzahl Gold: "+goldAmount,Color.white,new Color(255,255,255,0),new Font("Arial",0,22));
+      gameGrid.addActor(text, new Location(0,9));
+      
   }
 }

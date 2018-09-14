@@ -26,17 +26,10 @@ public class MainActivity extends GameGrid
         gold = new Gold();
         addActor(gold, getRandomEmptyLocation());
     }
-   
-    /*Actor actor = getOneActorAt(mainPlayer.getLocation(), Gold.class);  
-    if(actor != null)
-        goldAmount++;*/
-    TextActor text = new TextActor("Anzahl Gold: "+goldAmount,Color.white,new Color(255,255,255,0),new Font("Arial",0,22));
-    addActor(text, new Location(0,9));
       
     setTitle("Sammle alles Gold & Lass dich nicht erwischen!");
     
     countScore();
-    addGold();
     show();
     doRun();
   }
@@ -51,14 +44,5 @@ public class MainActivity extends GameGrid
       {
         goldAmount++;
       }
-  }
-  public void addGold()
-  {
-      Actor gold = getOneActorAt(mainPlayer.getLocation(), Gold.class); 
-      if (gold != null)
-       {
-          for (int n = 0; n < 1; n++)
-              addActor(new Gold(), getRandomEmptyLocation());
-       }
   }
 }
