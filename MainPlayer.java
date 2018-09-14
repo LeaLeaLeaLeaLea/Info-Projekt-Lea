@@ -59,10 +59,5 @@ class MainPlayer extends Actor implements GGKeyListener
       text.removeSelf();
       text = new TextActor("Anzahl Gold: "+goldAmount,Color.white,new Color(255,255,255,0),new Font("Arial",0,22));
       gameGrid.addActor(text, new Location(0,9));
-
-      {
-          text.removeSelf();
-          gameGrid.addActor(text, new Location(0,9));
-      }    
   }
 }
