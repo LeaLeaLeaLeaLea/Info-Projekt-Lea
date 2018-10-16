@@ -35,6 +35,7 @@ class MainPlayer extends Actor implements GGKeyListener
      move();
      tryToTake();
      showScore();
+     borderListener();
     
     return true;
   }
@@ -57,7 +58,11 @@ class MainPlayer extends Actor implements GGKeyListener
   public void showScore()
   {
       text.removeSelf();
-      text = new TextActor("Anzahl Gold: "+goldAmount,Color.white,new Color(255,255,255,0),new Font("Arial",0,22));
+      text = new TextActor("Anzahl Gold: "+goldAmount,Color.white,new Color(255,255,255,0),new Font("Arial",0,30));
       gameGrid.addActor(text, new Location(0,9));
   }
+  public void borderListener()
+  {
+      
+  } 
 }

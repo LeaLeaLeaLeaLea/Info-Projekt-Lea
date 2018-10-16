@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=MainPlayer
+comment1.params=
+comment1.target=MainPlayer()
+comment2.params=evt
+comment2.target=boolean\ keyPressed(java.awt.event.KeyEvent)
+comment3.params=evt
+comment3.target=boolean\ keyReleased(java.awt.event.KeyEvent)
+comment4.params=
+comment4.target=void\ tryToTake()
+comment5.params=
+comment5.target=void\ showScore()
+comment6.params=
+comment6.target=void\ borderListener()
+numComments=7

@@ -13,7 +13,7 @@ public class MainActivity extends GameGrid
   
   public MainActivity()
   {
-    super(10, 10, 100, Color.gray,"background3.jpg");
+    super(10, 10, 100, Color.gray,"background5.jpg");
     mainPlayer = new MainPlayer();
     addActor(mainPlayer, new Location(0,0));
     addKeyListener(mainPlayer);
@@ -27,7 +27,7 @@ public class MainActivity extends GameGrid
         addActor(gold, getRandomEmptyLocation());
     }
       
-    setTitle("Sammle alles Gold & Lass dich nicht erwischen!");
+    setTitle("Sammle Gold & Lass dich nicht erwischen!");
     
     countScore();
     show();
@@ -45,4 +45,8 @@ public class MainActivity extends GameGrid
         goldAmount++;
       }
   }
+  //TO DO:
+  //Pro 10(?) Münzen immer schneller
+  //Spieler nicht aus Spielfeld laufen
+  //Game Over Screen?
 }
