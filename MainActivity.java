@@ -46,7 +46,12 @@ public class MainActivity extends GameGrid
       }
   }
   //TO DO:
-  //Pro 10(?) Münzen immer schneller
-  //Spieler nicht aus Spielfeld laufen
-  //Game Over Screen?
+  
+  //Spieler nicht aus Spielfeld laufen!
+  //Actor actor = gameGrid.getOneActorAt(getLocation(), MainPlayer.class);
+  //if (actor.isInGrid()){
+      
+  
+  //Game Over Screen x
+  //In den Vordergrund?
 }

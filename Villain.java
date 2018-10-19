@@ -1,6 +1,9 @@
 import ch.aplu.jgamegrid.*;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
+import java.awt.Point;
+import ch.aplu.util.*;
+import java.awt.*;
 
 public class Villain extends Actor
 {
@@ -19,8 +22,13 @@ public class Villain extends Actor
       setDirection(getLocation().getCompassDirectionTo(mainPlayer.getLocation()));
       move();
     }
-    Actor aPlayer = gameGrid.getOneActorAt(getLocation(), MainPlayer.class);
-    if (aPlayer != null)
-      aPlayer.removeSelf();
+    Actor player = gameGrid.getOneActorAt(getLocation(), MainPlayer.class);
+    if (player != null){
+      gameGrid.getBg().setFont(new Font("SansSerif", Font.BOLD, 120));
+      gameGrid.getBg().setPaintColor(Color.white);
+      gameGrid.getBg().drawText("Game Over!", new Point(170, 500));
+      
+      player.removeSelf();
+    }
   }
 } 
