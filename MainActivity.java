@@ -13,7 +13,7 @@ public class MainActivity extends GameGrid
   
   public MainActivity()
   {
-    super(10, 10, 100, Color.gray,"background5.jpg");
+    super(10, 10, 100, null,"background5.jpg");
     mainPlayer = new MainPlayer();
     addActor(mainPlayer, new Location(0,0));
     addKeyListener(mainPlayer);
@@ -47,11 +47,5 @@ public class MainActivity extends GameGrid
   }
   //TO DO:
   
-  //Spieler nicht aus Spielfeld laufen!
-  //Actor actor = gameGrid.getOneActorAt(getLocation(), MainPlayer.class);
-  //if (actor.isInGrid()){
-      
-  
-  //Game Over Screen x
-  //In den Vordergrund?
+  //Extras?
 }

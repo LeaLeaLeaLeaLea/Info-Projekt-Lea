@@ -18,26 +18,34 @@ class MainPlayer extends Actor implements GGKeyListener
 
   public boolean keyPressed(KeyEvent evt)
   {
-    Actor actor = gameGrid.getOneActorAt(getLocation(), MainPlayer.class);
-    if (actor.isInGrid()){
-        switch (evt.getKeyCode())
+       
+   Actor actor = gameGrid.getOneActorAt(getLocation(), MainPlayer.class);
+   int xLoca = actor.getX();
+   int yLoca = actor.getY();    
+   switch (evt.getKeyCode())
         {
           case KeyEvent.VK_UP:
             setDirection(270);
+            if (yLoca != 0)
+                move(); 
             break;
           case KeyEvent.VK_RIGHT:
             setDirection(0);
+            if (xLoca != 9)
+                move(); 
             break;
           case KeyEvent.VK_LEFT:
             setDirection(180);
+            if (xLoca != 0)
+                move(); 
             break;
           case KeyEvent.VK_DOWN:
-            setDirection(90);  
+            setDirection(90);
+            if (yLoca != 9)
+                move(); 
             break;
         }
-    }
-    
-     move();
+   
      tryToTake();
      showScore();
      changeDifficulty();
@@ -86,9 +94,4 @@ class MainPlayer extends Actor implements GGKeyListener
       if (goldAmount >= 20)
            gameGrid.setSimulationPeriod(60);      
   }
-  public void borderListener()
-  {
-      
-
-  } 
 }
