@@ -10,6 +10,7 @@ class MainPlayer extends Actor implements GGKeyListener
   public static int goldAmount = 0;
   private TextActor text = new TextActor("Anzahl Gold: "+goldAmount,Color.white,new Color(255,255,255,0),new Font("Arial",0,22));
   //MainPlayer mainPlayer;
+  //public static int trapDamage = 5;
   
   public MainPlayer()
   {
@@ -47,6 +48,7 @@ class MainPlayer extends Actor implements GGKeyListener
         }
    
      tryToTake();
+     activateTrap();
      showScore();
      changeDifficulty();
      
@@ -66,6 +68,17 @@ class MainPlayer extends Actor implements GGKeyListener
         actor.removeSelf();
         for (int n = 0; n < 1; n++)
               gameGrid.addActor(new Gold(), gameGrid.getRandomEmptyLocation());
+    }
+  }
+  public void activateTrap()
+  {
+    Actor actor = gameGrid.getOneActorAt(getLocation(), Trap.class);
+    if (actor != null)
+    {
+        goldAmount--;
+        actor.removeSelf();
+        for (int n = 0; n < 1; n++)
+              gameGrid.addActor(new Trap(), gameGrid.getRandomEmptyLocation());
     }
   }
   public void showScore()

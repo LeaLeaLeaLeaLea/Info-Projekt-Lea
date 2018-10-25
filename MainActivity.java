@@ -10,6 +10,7 @@ public class MainActivity extends GameGrid
   public int goldAmount = 0;  
   MainPlayer mainPlayer;
   Gold gold;
+  Trap trap;
   
   public MainActivity()
   {
@@ -27,9 +28,16 @@ public class MainActivity extends GameGrid
         addActor(gold, getRandomEmptyLocation());
     }
       
+        for (int i = 0; i < 1; i++)
+    {
+        trap = new Trap();
+        addActor(trap, getRandomEmptyLocation());
+    }
+    
     setTitle("Sammle Gold & Lass dich nicht erwischen!");
     
-    countScore();
+    //countScore();
+    //trapScore();
     show();
     doRun();
   }
@@ -37,7 +45,7 @@ public class MainActivity extends GameGrid
   {
     new MainActivity();
   }
-    public void countScore()
+  /*public void countScore()
   {
       Actor actor1 = getOneActorAt(mainPlayer.getLocation(), Gold.class);
       if (actor1 != null)
@@ -45,6 +53,14 @@ public class MainActivity extends GameGrid
         goldAmount++;
       }
   }
+      public void trapScore()
+  {
+      Actor actor1 = getOneActorAt(mainPlayer.getLocation(), Trap.class);
+      if (actor1 != null)
+      {
+        goldAmount--;
+      }
+  }*/
   //TO DO:
   
   //Extras?
