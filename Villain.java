@@ -26,7 +26,11 @@ public class Villain extends Actor
     if (player != null){
       gameGrid.getBg().setFont(new Font("SansSerif", Font.BOLD, 120));
       gameGrid.getBg().setPaintColor(Color.white);
-      gameGrid.getBg().drawText("Game Over!", new Point(170, 500));
+      gameGrid.getBg().drawText("Game Over!", new Point(120, 500));
+      
+      gameGrid.getBg().setFont(new Font("SansSerif", Font.BOLD, 50));
+      gameGrid.getBg().setPaintColor(Color.black);      
+      gameGrid.getBg().drawText("Gold gesammelt: "+MainPlayer.goldAmount, new Point(210, 580));
       
       player.removeSelf();
     }

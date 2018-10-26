@@ -9,6 +9,7 @@ class MainPlayer extends Actor implements GGKeyListener
 {
   public static int goldAmount = 0;
   private TextActor text = new TextActor("Anzahl Gold: "+goldAmount,Color.white,new Color(255,255,255,0),new Font("Arial",0,22));
+  //Villain villain;
   //MainPlayer mainPlayer;
   //public static int trapDamage = 5;
   
@@ -51,7 +52,7 @@ class MainPlayer extends Actor implements GGKeyListener
      activateTrap();
      showScore();
      changeDifficulty();
-     
+
     return true;
   }
 
@@ -89,22 +90,13 @@ class MainPlayer extends Actor implements GGKeyListener
   }
   public void changeDifficulty()
   {
-   /*   if (goldAmount >= 20)
-           gameGrid.setSimulationPeriod(160);
-      if (goldAmount >= 40)
-           gameGrid.setSimulationPeriod(110);
-      if (goldAmount >= 60)
-           gameGrid.setSimulationPeriod(80);  
-      if (goldAmount >= 80)
-           gameGrid.setSimulationPeriod(60);*/
-           
-      if (goldAmount >= 5)
-           gameGrid.setSimulationPeriod(160);
-      if (goldAmount >= 10)
-           gameGrid.setSimulationPeriod(110);
       if (goldAmount >= 15)
+           gameGrid.setSimulationPeriod(160);
+      if (goldAmount >= 30)
+           gameGrid.setSimulationPeriod(110);
+      if (goldAmount >= 50)
            gameGrid.setSimulationPeriod(80);  
-      if (goldAmount >= 20)
-           gameGrid.setSimulationPeriod(60);      
+      if (goldAmount >= 70)
+           gameGrid.setSimulationPeriod(60);
   }
 }

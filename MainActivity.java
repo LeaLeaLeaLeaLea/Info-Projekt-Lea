@@ -34,10 +34,8 @@ public class MainActivity extends GameGrid
         addActor(trap, getRandomEmptyLocation());
     }
     
-    setTitle("Sammle Gold & Lass dich nicht erwischen!");
+    setTitle("Sammle Gold, vermeide Gift & Lass dich nicht erwischen!");
     
-    //countScore();
-    //trapScore();
     show();
     doRun();
   }
@@ -45,23 +43,4 @@ public class MainActivity extends GameGrid
   {
     new MainActivity();
   }
-  /*public void countScore()
-  {
-      Actor actor1 = getOneActorAt(mainPlayer.getLocation(), Gold.class);
-      if (actor1 != null)
-      {
-        goldAmount++;
-      }
-  }
-      public void trapScore()
-  {
-      Actor actor1 = getOneActorAt(mainPlayer.getLocation(), Trap.class);
-      if (actor1 != null)
-      {
-        goldAmount--;
-      }
-  }*/
-  //TO DO:
-  
-  //Extras?
 }
