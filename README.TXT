@@ -1,14 +1,7 @@
-------------------------------------------------------------------------
-Dies ist die README-Datei des Projekts. Hier sollten Sie Ihr Projekt
-beschreiben.
-Erzählen Sie dem Leser (jemand, der nichts über dieses Projekt weiss),
-alles, was er/sie wissen muss. Üblicherweise sollte der Kommentar 
-zumindest die folgenden Angaben umfassen:
-------------------------------------------------------------------------
 
-PROJEKTBEZEICHNUNG:Info-Projekt Lea Jakob
+PROJEKTBEZEICHNUNG:Info-Projekt Lea Jakob: Magical Thief
 
-VERSION oder DATUM:7 | 31.08.2018 - 26.10.2018
+VERSION 7 | ENTWICKLUNG VOM 31.08.2018 BIS ZUM 26.10.2018
 
 IDEE
 
@@ -28,9 +21,9 @@ In den restlichen Lektionen arbeitete ich meistens an mehreren Sachen gleichzeit
 
 - Eine funktionierende Punktezählung
 - Einen "Game Over!"-Schriftzug
+- Zusätzlich zum "Game Over!"-Schriftzug ein Untertitel, der einem die Endpunktzahl anzeigt
 - Die Einstellung, dass der Spieler sich nicht aus dem Spielfeld bewegen kann
 - Eine Schwierigkeitsänderung: Je mehr Münzen der Spieler sammelt, desto schneller wird der Drache
-- Zusätzlich zum "Game Over!"-Schriftzug ein Untertitel, der einem die Endpunktzahl anzeigt
 - Einen weiteren einsammelbaren Gegenstand: Eine Giftflasche, die einem Goldmünzen abzieht, wenn man sie einsammelt
 
-Alles in allem bin ich zufrieden mit meinem Spiel, es hat mir sehr viel Spass gemacht, es zu entwickeln und ich habe auch einiges dazu gelernt :)
+Alles in allem bin ich zufrieden mit meinem Spiel, es hat mir sehr viel Spass gemacht es zu entwickeln und ich habe auch einiges dazu gelernt :)
