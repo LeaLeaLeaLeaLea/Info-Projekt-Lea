@@ -8,7 +8,7 @@ Ich entschied mich ganz am Anfang in der ersten Doppellektion, ein Projekt mit G
 
 UMSETZUNG
 
-Alles was ich programmiere mache ich mithilfe von http://java-online.ch/gamegrid/index.php, entweder nehme ich einzelne Elemente aus Beispielspielen oder aus der Dokumentation oder ich gebrauche meinschon vorhandenen Wissen, 
+Alles was ich programmiere mache ich mithilfe von http://java-online.ch/gamegrid/index.php, entweder nehme ich einzelne Elemente aus Beispielspielen oder aus der Dokumentation oder ich gebrauche mein schon vorhandenen Wissen, 
 
 Das erste, das ich programmierte, war ein Spieler, der mit den Pfeiltasten auf dem Spielfeld bewegbar war; das war in der ersten Doppellektion.
 
